@@ -10,6 +10,9 @@ public class Main {
         System.out.println("Summe: " + sum(number1, number2));
     }
 
+    public static void printInput (int num1, int num2) {
+        System.out.println(num1 + num2);
+    }
 
     public static void main(String[] args){
         int num1 = 10;
@@ -20,6 +23,11 @@ public class Main {
         int num4 = 40;
         sum2(num3, num4);
 
-        int input, input2;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Geben Sie eine Nummer ein und drücken Sie ENTER:");
+        int input = scanner.nextInt();
+        System.out.println("Geben Sie eine zweite Nummer ein und drücken Sie ENTER:");
+        int input2 = scanner.nextInt();
+        printInput(input, input2);
     }
 }
