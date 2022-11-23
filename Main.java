@@ -1,18 +1,29 @@
-import java.util.Scanner;
-
 public class Main {
-    public static void printInput (int num1, int num2) {
-        int sum = num1 + num2;
-        System.out.println("Die Summe der eingegebenen Zahlen beträgt: " + sum);
+    public static boolean length(String str) {
+        return str.length() > 20;
+    }
+
+    public static boolean isFancy(String str) {
+        return str.contains("fancy");
+    }
+
+    public static void check(String str) {
+        if (length(str) && isFancy(str)) {
+            System.out.println("Your String is longer than 20 symbols and contains the word 'fancy'");
+        }
+        else if (length(str)) {
+            System.out.println("Your String is longer than 20");
+        }
+        else if (isFancy(str)) {
+            System.out.println("Your String contains fancy");
+        }
+        else {
+            System.out.println("Your string is dumb lol");
+        }
     }
 
     public static void main(String[] args){
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Geben Sie eine Nummer ein und drücken Sie ENTER:");
-        int input = scanner.nextInt();
-        System.out.println("Geben Sie eine zweite Nummer ein und drücken Sie ENTER:");
-        int input2 = scanner.nextInt();
-        printInput(input, input2);
+        check("This text wqrewre bababooey");
     }
+
 }
